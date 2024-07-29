@@ -1,0 +1,9 @@
+sourceFormat: ICEBERG
+targetFormats:
+  - DELTA
+datasets:
+  -
+    tableBasePath: s3://test-9-july/test-warehouse-2/test_db.db/taxis
+    tableName: taxis
+    namespace: test_db
+    # partitionSpec: city:VALUE

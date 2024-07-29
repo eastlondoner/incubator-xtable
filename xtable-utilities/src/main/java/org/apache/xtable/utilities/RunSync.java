@@ -123,6 +123,12 @@ public class RunSync {
 
     byte[] customConfig = getCustomConfigurations(cmd, HADOOP_CONFIG_PATH);
     Configuration hadoopConf = loadHadoopConf(customConfig);
+    // Print Hadoop configuration to stdout
+    System.out.println("Hadoop Configuration:");
+    for (Map.Entry<String, String> entry : hadoopConf) {
+        System.out.println(entry.getKey() + " = " + entry.getValue());
+    }
+    System.out.println(); // Add a blank line for better readability
     byte[] icebergCatalogConfigInput = getCustomConfigurations(cmd, ICEBERG_CATALOG_CONFIG_PATH);
     IcebergCatalogConfig icebergCatalogConfig = loadIcebergCatalogConfig(icebergCatalogConfigInput);
 

@@ -1,0 +1,11 @@
+catalogImpl: org.apache.iceberg.aws.glue.GlueCatalog
+catalogName: iceberg
+catalogOptions:
+  io-impl: org.apache.iceberg.aws.s3.S3FileIO
+  warehouse: s3://bucket-name/warehouse
+  s3.endpoint: <my-endpoint>
+  s3.path-style-access: true
+  warehouse: s3://test-9-july/test-warehouse-2/
+  client.region: us-east-1
+  s3.access-key-id: <access key id>
+  s3.secret-access-key: <access key secret>
